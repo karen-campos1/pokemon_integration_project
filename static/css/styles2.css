@@ -1,0 +1,78 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#pokemon-logo {
+    height: auto;
+    max-width: 200px;
+}
+
+#custom-navbar-nav .nav-link {
+    color: #FACB08;
+    font-size: 22px;
+    text-shadow:
+    -2px -2px 0  #2E6DB4,  /* Top-left shadow */
+     2px -2px 0  #2E6DB4,  /* Top-right shadow */
+    -2px  2px 0 #2E6DB4,  /* Bottom-left shadow */
+     2px  2px 0  #2E6DB4;  /* Bottom-right shadow */
+    
+}
+#custom-navbar-nav .nav-link:hover{
+    background-color: #2E6DB4;
+    border-radius: 10px;
+}
+
+#body-search {
+    background-color: #44CAF0;
+}
+
+form {
+    background-color:#FACB08;
+    max-height: 200px;
+    max-width: 500px;
+    border-radius: 10px;
+    border: 3px solid #2E6DB4;
+}
+
+#form-container {
+    border: 8px solid #2E6DB4;
+}
+
+.custom-card-background {
+    background-color: #371745; 
+}
+
+.form-control{
+    background-color: #2E6DB4;
+}
+
+.ps-3{
+    color:#FACB08;
+    font-size: 20px;
+    text-shadow:
+    -2px -2px 0  #371745,  /* Top-left shadow */
+     2px -2px 0  #371745,  /* Top-right shadow */
+    -2px  2px 0 #371745,  /* Bottom-left shadow */
+     2px  2px 0  #371745;  /* Bottom-right shadow */
+}
+
+#btn-search {
+    color: #2E6DB4;
+    font-size: 20px;
+    border: 2px, solid #FACB08;
+}
+
+#btn-search:hover {
+    color:#371745
+}
+
+.team-title {
+    color: #FACB08;
+    text-shadow:
+    -2px -2px 0  #2E6DB4,  /* Top-left shadow */
+     2px -2px 0  #2E6DB4,  /* Top-right shadow */
+    -2px  2px 0 #2E6DB4,  /* Bottom-left shadow */
+     2px  2px 0  #2E6DB4;  /* Bottom-right shadow */
+}

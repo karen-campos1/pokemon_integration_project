@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Pokémon pokemon search details abilities"/>
+<link rel="shortcut icon" href="./static/images/pokeball.png" type="image/x-icon">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="./static/css/styles2.css">
+<script src="./static/js/script.js" defer></script>
+<title>Pokémon Search Details</title>
+</head>
+
+<header class="row align-items-center px-md-auto bg-transparent">
+    <nav class="navbar navbar-expand-lg fixed-top w-100" id="custom-navbar">
+        <div class="container-fluid">
+            <ul class="navbar-nav me-auto" id="custom-navbar-nav">
+                <li class="nav-item" id="custom-nav-item-home">
+                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item" id="custom-nav-item-search">
+                    <a class="nav-link" href="./search_details.html">Search</a>
+                </li>
+                <li class="nav-item" id="custom-nav-item-details">
+                    <a class="nav-link" href="./search_details.html">Details</a>
+                </li>
+                <li class="nav-item" id="custom-nav-item-team-builder">
+                    <a class="nav-link" href="./search_details.html">Team Builder</a>
+                </li>
+            </ul>
+            <div class="d-flex justify-content-end">
+                <img src="./static/images/pokemon.png" alt="logo" id="pokemon-logo">
+            </div>
+        </div>
+    </nav>
+</header>
+
+<body class="container d-flex flex-column align-items-center" id="body-search">
+    <form onsubmit="handleSubmit(event)"class="row w-75 p-5 g-3 mt-5" id="form-container">
+        <div class="form-floating col-12">
+        <input type="text" class="form-control" name="search" id="search" placeholder="Pokemon name here" onchange="handleSubmit">
+        <label for="search" class="ps-3" id="label-form">Pokémon Name</label>
+    </div>
+        <button type="submit" id="btn-search" class="btn">Search</button>
+    </form>
+    <br><br><div class="row" id="pokemon-display">
+        <! pokemon card will be displayed here -->
+    </div>
+    <div class="row mt-4" id="team-display">
+      <! Team members will be displayed here -->
+    </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</body>
+</html>
