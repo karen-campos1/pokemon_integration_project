@@ -92,9 +92,19 @@ class PokemonTeam {
             alert(`- ${pokemon.name}`);
         });
     }
+    calculateTotalStats() {
+        return this.team.reduce((total, pokemon) => {
+            const pokemonStats = pokemon.stats.reduce((sum, stat) => sum + stat.base_stat, 0);
+            return total + pokemonStats;
+        }, 0);
+    }
 }
 
 const myPokemonTeam = new PokemonTeam();
+
+// Create an opponent team
+const opponentPokemonTeam = new PokemonTeam(); 
+
 
 async function handleSubmit(event) {
     event.preventDefault();
@@ -186,3 +196,25 @@ function displayTeam() {
         teamDisplay.appendChild(card);
     });
 }
+
+// Battle simulation function
+function simulateBattle() {
+    const myTeamStats = myPokemonTeam.calculateTotalStats();
+    const opponentTeamStats = opponentPokemonTeam.calculateTotalStats();
+
+    let resultMessage = `Your team total stats: ${myTeamStats}\nOpponent team total stats: ${opponentTeamStats}\n`;
+
+    if (myTeamStats > opponentTeamStats) {
+        resultMessage += "Your team wins!";
+    } else if (myTeamStats < opponentTeamStats) {
+        resultMessage += "Opponent team wins!";
+    } else {
+        resultMessage += "It's a tie!";
+    }
+
+    alert(resultMessage);
+}
+
+
+// HTML button to trigger battle simulation
+document.getElementById("battle-btn").addEventListener("click", simulateBattle);
